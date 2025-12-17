@@ -75,7 +75,7 @@ Browsing On
 </Location>
 ```
 
-### 4️⃣ Iniciar el servei
+### 4️⃣ Iniciar el servei i verificar el seu funcionament
 
 ```bash
 sudo systemctl restart cups && systemctl status cups
@@ -83,26 +83,30 @@ sudo systemctl restart cups && systemctl status cups
 
 ### 5️⃣ Comprovacions
 
-Gestió client web CUPS, introduir usuari i contrasenya del nostre usuari Ubuntu
+Administració web del CUPS, introduir usuari i contrasenya del nostre usuari Ubuntu
 
 ```bash
 https://192.168.56.101:631
 ```
+Anar al menú **Administració** i fer clic en el botó d'**afegir impressora**
 
-### 6️⃣ Error al accedir des del client
+### 6️⃣ Error al voler afegir la nova impressora
 
-Primer de tot haurem de instal·lar el client nfs al nostre client Ubunto Desktop / Zorin
+En intentar afegir la nova impressora, es produirà un error. Per solucionar-ho, cal afegir el nostre usuari al grup lpadmin. Això permet que l’usuari pugui administrar les impressores (afegir-ne, eliminar-ne o configurar-les) sense necessitat de ser administrador del sistema.
 
 ```bash
 sudo usermod -aG lpadmin usuari
 ```
 
-### 7️⃣
+### 7️⃣Afegir impressora
+- Ara dins les "Local Printers" afegirem: (*) CUPS-PDF (Virtual PDF Printer)
+- Marcar l'opció [v] Compartir aquesta impressora i fer següent
+- Escollir model: Generic CUPS-PDF Printer (no options) (en)
 
 
+### 8️⃣ Instal·lar la impressora en el nostre client
+- Anar al nostres Ubuntu Desktop / Zorin a la configuració de les impressores
+- Fem afegir nova impressora
+- Mirem de fer algunes proves d'impressió i verifiquem que surten els treballs en la cua
+- Per ultim mostrar el contigut de la carpeta ~/PDF (tree / ls -al) en el nostre servidor.
 
-### 8️⃣
-
-
-
-### 9️⃣ 
