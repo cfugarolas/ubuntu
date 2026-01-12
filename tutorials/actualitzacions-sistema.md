@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="/img/logo_ubuntu.png" alt="Logo Ubuntu" width="100"/>
+<img src="/img/logo_ubuntu.png" alt="Logo Ubuntu" width="95"/>
 
 # 🐧 Ubuntu Tutorials  
 ### Actualitzar completament el sistema Ubuntu
